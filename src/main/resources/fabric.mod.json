@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "cord-log",
+	"version": "${version}",
+	"name": "Cord Log",
+	"description": "Logs the cordinates of player",
+	"authors": [
+		"MongoMatto"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cord-log/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mongomatto.cordlog.CordLog"
+		],
+		"fabric-datagen": [
+			"net.mongomatto.cordlog.CordLogDataGenerator"
+		],
+		"client":[
+			"net.mongomatto.cordlog.CordLogClient"
+		]
+	},
+	"mixins": [
+		"cord-log.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
